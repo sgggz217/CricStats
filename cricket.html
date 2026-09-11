@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Statistics — Home</title>
+  <meta name="description" content="Live cricket statistics dashboard — overall performance summary and top performers.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Animated Background -->
+  <div class="bg-orbs">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">CricStats</div>
+    <div class="header-right">
+      <nav class="nav">
+        <a href="cricket.html" class="active">Home</a>
+        <a href="players.html">Players</a>
+        <a href="compare.html">Compare</a>
+        <a href="teams.html">Teams</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Overall Summary -->
+    <h2 class="section-title"><span class="icon">📊</span> Overall Performance</h2>
+    <div class="card-grid">
+      <div class="card accent-cyan">
+        <div class="card-label">Total Players</div>
+        <div class="card-value" id="stat-players">–</div>
+      </div>
+      <div class="card accent-blue">
+        <div class="card-label">Total Runs</div>
+        <div class="card-value" id="stat-runs">–</div>
+      </div>
+      <div class="card accent-purple">
+        <div class="card-label">Total Wickets</div>
+        <div class="card-value" id="stat-wickets">–</div>
+      </div>
+      <div class="card accent-pink">
+        <div class="card-label">Avg Strike Rate</div>
+        <div class="card-value" id="stat-sr">–</div>
+      </div>
+    </div>
+
+    <!-- Top Performers -->
+    <h2 class="section-title"><span class="icon">🏆</span> Top Performers</h2>
+    <div class="performer-cards">
+      <div class="performer-card" id="top-batsman">
+        <div class="performer-avatar bat">🏏</div>
+        <div class="performer-info">
+          <h3>Loading…</h3>
+          <div class="stat-line" style="color:var(--text-muted)">Fetching top run-scorer</div>
+        </div>
+      </div>
+      <div class="performer-card" id="top-bowler">
+        <div class="performer-avatar bowl">🎳</div>
+        <div class="performer-info">
+          <h3>Loading…</h3>
+          <div class="stat-line" style="color:var(--text-muted)">Fetching top wicket-taker</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 CricStats — Cricket Statistics Dashboard</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="home.js"></script>
+</body>
+
+</html>

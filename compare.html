@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Statistics — Compare Players</title>
+  <meta name="description" content="Compare two cricket players side by side — batting, bowling and career statistics.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Animated Background -->
+  <div class="bg-orbs">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">CricStats</div>
+    <div class="header-right">
+      <nav class="nav">
+        <a href="cricket.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="compare.html" class="active">Compare</a>
+        <a href="teams.html">Teams</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2 class="section-title"><span class="icon">⚖️</span> Compare Players</h2>
+
+    <div class="compare-inputs">
+      <div class="field">
+        <label for="search-1">Player 1</label>
+        <input type="text" id="search-1" placeholder="Search player name…" autocomplete="off">
+        <div class="autocomplete-list" id="ac-list-1"></div>
+      </div>
+
+      <div class="compare-vs">VS</div>
+
+      <div class="field">
+        <label for="search-2">Player 2</label>
+        <input type="text" id="search-2" placeholder="Search player name…" autocomplete="off">
+        <div class="autocomplete-list" id="ac-list-2"></div>
+      </div>
+
+      <button class="btn" onclick="comparePlayers()">Compare</button>
+    </div>
+
+    <div id="compare-result" class="compare-result"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 CricStats — Cricket Statistics Dashboard</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="compare.js"></script>
+</body>
+
+</html>

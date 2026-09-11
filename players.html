@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Statistics — Players</title>
+  <meta name="description" content="Browse, filter, and explore detailed batting and bowling statistics for cricket players.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Animated Background -->
+  <div class="bg-orbs">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">CricStats</div>
+    <div class="header-right">
+      <nav class="nav">
+        <a href="cricket.html">Home</a>
+        <a href="players.html" class="active">Players</a>
+        <a href="compare.html">Compare</a>
+        <a href="teams.html">Teams</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2 class="section-title"><span class="icon">👤</span> Players</h2>
+
+    <!-- Tabs -->
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="tab-filter">Filter</button>
+      <button class="tab-btn" data-tab="tab-batting">Batting</button>
+      <button class="tab-btn" data-tab="tab-bowling">Bowling</button>
+      <button class="tab-btn" data-tab="tab-allrounder">Allrounder</button>
+    </div>
+
+    <!-- Tab: Filter -->
+    <div id="tab-filter" class="tab-content active">
+      <div class="filter-form">
+        <div class="field">
+          <label for="filter-name">Player Name</label>
+          <input type="text" id="filter-name" placeholder="e.g. Virat Kohli">
+        </div>
+        <div class="field">
+          <label for="filter-team">Team</label>
+          <select id="filter-team">
+            <option>All</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filter-role">Role</label>
+          <select id="filter-role">
+            <option>All</option>
+          </select>
+        </div>
+        <button class="btn" id="apply-filter-btn">Apply Filter</button>
+      </div>
+    </div>
+
+    <!-- Tab: Batting -->
+    <div id="tab-batting" class="tab-content">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Country</th>
+              <th>Matches</th>
+              <th>Innings</th>
+              <th>Runs</th>
+              <th>Average</th>
+              <th>SR</th>
+              <th>100s</th>
+              <th>50s</th>
+            </tr>
+          </thead>
+          <tbody id="batting-tbody">
+            <tr><td colspan="9" style="text-align:center;color:var(--text-muted);padding:2rem">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tab: Bowling -->
+    <div id="tab-bowling" class="tab-content">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Country</th>
+              <th>Matches</th>
+              <th>Innings</th>
+              <th>Wickets</th>
+              <th>Average</th>
+              <th>Economy</th>
+              <th>Best</th>
+            </tr>
+          </thead>
+          <tbody id="bowling-tbody">
+            <tr><td colspan="8" style="text-align:center;color:var(--text-muted);padding:2rem">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tab: Allrounder -->
+    <div id="tab-allrounder" class="tab-content">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Country</th>
+              <th>Matches</th>
+              <th>Runs</th>
+              <th>Wickets</th>
+              <th>Batting SR</th>
+              <th>Economy</th>
+            </tr>
+          </thead>
+          <tbody id="allrounder-tbody">
+            <tr><td colspan="7" style="text-align:center;color:var(--text-muted);padding:2rem">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 CricStats — Cricket Statistics Dashboard</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="players.js"></script>
+</body>
+
+</html>
